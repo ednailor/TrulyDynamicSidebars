@@ -5,11 +5,11 @@
 require_once ( 'lib/truly-dynamic-sidebars.php' );
 
 // Regsiter Any Meta Boxes with Meta Box Class
-function _wds_register_meta_boxes() {
+function redcm_register_meta_boxes() {
 	global $meta_boxes;
 	if ( class_exists( 'RW_Meta_Box' ) ) { foreach ( $meta_boxes as $meta_box ) { new RW_Meta_Box( $meta_box );	} }
 }
-add_action( 'admin_init', '_wds_register_meta_boxes' );
+add_action( 'admin_init', 'redcm_register_meta_boxes' );
 
 
 
